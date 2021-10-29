@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <AssemblyName>nodeSqlApp</AssemblyName>
+        <RootNamespace>nodeSqlApp</RootNamespace>
+        <PackageId>nodeSqlApp</PackageId>
+        <Authors>nodeSqlApp</Authors>
+        <Company>nodeSqlApp</Company>
+        <Product>nodeSqlApp</Product>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Dapper" Version="2.0.90" />
+      <PackageReference Include="Microsoft.Data.Sqlite" Version="5.0.11" />
+      <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.0.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Dapper-Extensions-master\DapperExtensions\DapperExtensions.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\identifier.sqlite">
+        <Link>identifier.sqlite</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Include="bin\Debug\net5.0\nodeSqlApp" />
+    </ItemGroup>
+
+</Project>
